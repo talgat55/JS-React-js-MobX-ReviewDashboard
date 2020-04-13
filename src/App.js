@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './components/Form';
+import Dashboard from './components/Dashboard';
 import {decorate, observable, action, computed} from 'mobx';
 import Store from './Store';
 
@@ -15,6 +16,7 @@ function App() {
   return (
       <div className="container">
           <Form store={reviewStore}/>
+          <Dashboard store={reviewStore}/>
       </div>
   );
 }
