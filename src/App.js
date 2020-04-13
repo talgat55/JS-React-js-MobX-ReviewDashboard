@@ -1,6 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Store from './Store';
+import {decorate, observable, action, computed} from 'mobx';
+
+
+decorate(Store, {
+    reviewList: observable,
+    addReview: action,
+    averageScore: computed,
+    reviewCount: computed
+});
 
 function App() {
   return (
